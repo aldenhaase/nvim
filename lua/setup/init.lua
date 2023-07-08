@@ -33,3 +33,20 @@ vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 
+vim.g.clipboard = {
+  name = 'WslClipboard',
+  copy = {
+    ['+'] = 'clip.exe',
+    ['*'] = 'clip.exe',
+  },
+  paste = {
+    ['+'] = function()
+      vim.fn.system('powershell.exe -c "[console]::stdout.WriteLine(Get-Clipboard -Raw)"')
+    end,
+    ['*'] = function()
+      vim.fn.system('powershell.exe -c "[console]::stdout.WriteLine(Get-Clipboard -Raw)"')
+    end,
+  },
+  cache_enabled = 0,
+}
+
