@@ -5,7 +5,7 @@ vim.keymap.set('n', '<leader>fk', function() builtin.find_files({hidden=true, no
 vim.keymap.set('n', '<leader>fl', function() builtin.find_files({cwd='~/'}) end, {})
 vim.keymap.set('n', '<leader>gs', builtin.grep_string, {})
 vim.keymap.set('n', '<leader>gg', function()
-    extensions.live_grep_args.live_grep_args({search = vim.fn.input("Grep > ") })
+    extensions.live_grep_args.live_grep_args({})
 end)
 vim.keymap.set('n', '<leader>vh', builtin.help_tags, {})
 
