@@ -1,7 +1,7 @@
 -- This file can be loaded by calling `lua require('plugins')` from your init.vim
 return {
     {
-        'nvim-telescope/telescope.nvim', tag = '0.1.5',
+        'nvim-telescope/telescope.nvim',
         dependencies = {
             {'nvim-lua/plenary.nvim'},
             {'nvim-telescope/telescope-live-grep-args.nvim'},
