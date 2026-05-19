@@ -1,4 +1,12 @@
 local builtin = require('telescope.builtin')
+
+require('telescope').setup({
+    defaults = {
+        preview = {
+            treesitter = false,
+        },
+    },
+})
 local lga = require('telescope').extensions.live_grep_args
 vim.keymap.set('n', '<leader>fj', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fk', function() builtin.find_files({hidden=true, no_ignore=true}) end, {})
