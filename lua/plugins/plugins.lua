@@ -116,7 +116,9 @@ return {
     -- ─── Language-specific ────────────────────────────────────────────────────
     {"rhysd/vim-clang-format"},
     {
-        "iamcco/markdown-preview.nvim",
-        build = function() vim.fn["mkdp#util#install"]() end,
+        "MeanderingProgrammer/render-markdown.nvim",
+        dependencies = { "nvim-treesitter/nvim-treesitter" },
+        opts = {},
+        ft = { "markdown" },
     },
 }
